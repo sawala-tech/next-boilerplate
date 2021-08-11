@@ -1,0 +1,65 @@
+{
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "javascript.format.semicolons": "remove",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "files.exclude": {
+        "**/.next/**": true,
+        "**/node_modules/**": true
+    },
+    "files.watcherExclude": {
+        "**/.next/**": true,
+        "**/node_modules/**": true
+    },
+    "todo-tree.highlights.defaultHighlight": {
+        "icon": "check",
+        "type": "tag",
+        "iconColor": "#9F7E18",
+    },
+    "todo-tree.general.tags": ["TODO","FIXME","FIXASAP","FIX","BUG","BUGMINOR","BUGMAJOR","[ ]","[x]"],
+    "todo-tree.general.tagGroups": {
+        "FIXME": [
+            "FIXME",
+            "FIXASAP",
+            "FIX",
+        ],
+        "BUG": [
+            "BUGMAJOR","BUGMINOR"
+        ]
+    },
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            "background": "#E2B93B",
+            "type": "tag",
+            "icon": "alert",
+            "gutterIcon": true
+        },
+        "FIXME": {
+            "icon": "tools",
+            "foreground": "white",
+            "background": "#db2777",
+            "type": "tag"
+        },
+        "BUG": {
+            "icon": "bug",
+            "background": "#EB5757",
+            "foreground": "white",
+            "gutterIcon": true
+        },
+        "[ ]": {
+            "background": "#ff000080",
+        },
+        "[x]": {
+            "background": "#00ff0080"
+        }
+    },
+    "todo-tree.filtering.ignoreGitSubmodules": true,
+    "todo-tree.general.statusBar": "tags",
+    "todo-tree.regex.regex": "(?:(?://|#|<!--|;|/\\*\\*?|\\*)\\s*($TAGS)|^\\s*- \\[ \\])",
+    "todo-tree.highlights.useColourScheme": true,
+    "todo-tree.filtering.excludeGlobs":["**/node_modules"]
+}

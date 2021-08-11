@@ -1,0 +1,21 @@
+@import 'tailwindcss/base';
+/* Write your own custom base styles here */
+/* Start purging... */
+@import 'tailwindcss/components';
+
+/* Stop purging. */
+@import 'typography';
+@import 'loader';
+html,
+body {
+  scroll-behavior: smooth;
+  background-color: #fff;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* Start purging... */
+@import 'tailwindcss/utilities';
+/* Stop purging. */
+/* Your own custom utilities */
