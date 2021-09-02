@@ -1,8 +1,7 @@
-
 const LandingPage: React.FC = () => {
   return (
     <>
-      <span>Installed</span>
+      <span tw="text-2xl text-red-600">Installed</span>
     </>
   )
 }

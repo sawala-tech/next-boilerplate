@@ -4,7 +4,7 @@
  * @returns boolean
  */
 
-export default function isExist(obj: any): boolean {
+export const isExist = (obj: any): boolean => {
   if (!obj) return false
   return true
 }

@@ -1,24 +1,25 @@
-import Document, {
-    DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript
-} from 'next/document'
+import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
 
-interface CustomDocumentProps {
-  spriteContent: string
-}
+import { extractCritical } from '@emotion/server'
 
-export default class CustomDocument extends Document<CustomDocumentProps> {
-  public static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
+export default class _DOCUMENT extends Document<{
+  ids: string[]
+  css: string
+}> {
+  static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx)
-
-    return initialProps
+    const page = await ctx.renderPage()
+    const styles = extractCritical(page.html)
+    return { ...initialProps, ...page, ...styles }
   }
 
-  public render(): JSX.Element {
+  render() {
     return (
       <Html>
-        <Head>{/* your head if needed */}</Head>
+        <Head>
+          <style data-emotion-css={this.props.ids.join(' ')} dangerouslySetInnerHTML={{ __html: this.props.css }} />
+        </Head>
         <body>
-          <div dangerouslySetInnerHTML={{ __html: this.props.spriteContent }} />
           <Main />
           <NextScript />
         </body>
