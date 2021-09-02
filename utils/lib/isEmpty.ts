@@ -4,7 +4,7 @@
  * @returns boolean
  */
 
-export default function isEmpty(obj: Record<string, unknown>): boolean {
+export const isEmpty = (obj: Record<string, unknown>): boolean => {
   for (const prop in obj) {
     if (Object.prototype.hasOwnProperty.call(obj, prop)) {
       return false

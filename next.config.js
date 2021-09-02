@@ -16,23 +16,11 @@ const REST_CONFIG = {
   // add another config here
 }
 const OPTIMIZED_IMAGES_CONFIG = {
-  optimizeImagesInDev: false,
-  inlineImageLimit: 8192,
   removeOriginalExtension: true,
   imagesName: '[name]-[hash].[ext]',
   imagesFolder: 'optimized',
   handleImages: ['jpeg', 'png', 'svg', 'webp'],
   optimizeImages: true,
-  mozjpeg: {
-    quality: 80
-  },
-  optipng: {
-    optimizationLevel: 3
-  },
-  webp: {
-    preset: 'default',
-    quality: 75
-  },
   responsive: {
     adapter: require('responsive-loader/sharp')
   }
