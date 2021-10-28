@@ -23,19 +23,17 @@
     "baseUrl": ".",
     "typeRoots": ["./@types", "./types", "./node_modules/@types"],
     "paths": {
-      "@/components/*": ["components/*"],
-      "@/types/*": ["@types/*"],
-      "@/shared/*": ["shared/*"],
-      "@/styles/*": ["shared/styles/*"],
-      "@/jsons/*": ["shared/jsons/*"],
-      "@/intl/*": ["shared/jsons/intl/*"],
-      "@/static/*": ["public/static/*"],
-      "@/services/*": ["services/*"],
-      "@/provider/*": ["services/provider/*"],
-      "@/hooks/*": ["hooks/*"],
-      "@/intl": ["shared/intl/index.ts"],
-      "@/utils/*": ["utils/*"],
-      "@/*": ["*"]
+      "@components/*": ["src/components/*"],
+      "@types/*": ["@types/*"],
+      "@shared/*": ["src/shared/*"],
+      "@styles/*": ["src/shared/styles/*"],
+      "@jsons/*": ["src/shared/jsons/*"],
+      "@intl/*": ["src/shared/jsons/intl/*"],
+      "@static/*": ["public/static/*"],
+      "@services/*": ["src/services/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@utils/*": ["src/utils/*"],
+      "@*": ["*"]
     }
   },
   "exclude": [

@@ -8,7 +8,7 @@ const NotFoundPage: React.FC = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
     </>
-  );
-};
+  )
+}
 
-export default NotFoundPage;
+export default NotFoundPage

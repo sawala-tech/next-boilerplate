@@ -1,4 +1,4 @@
-import '@/styles/index.scss'
+import '@styles/index.scss'
 
 import Head from 'next/head'
 
@@ -17,7 +17,7 @@ const CONSOLE_STYLE = {
 export const reportWebVitals = (metric: NextWebVitalsMetric) => {
   // disable it in production
   if (process.env.NODE_ENV === 'production') return
-  const VALUE: number = Number((metric.value / 1000).toFixed(3))
+  const VALUE: number = parseFloat((metric.value / 1000).toFixed(3))
   const STYLE: string = VALUE > 3 ? CONSOLE_STYLE.warn : CONSOLE_STYLE.ok
 
   switch (metric.name) {
