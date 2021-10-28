@@ -2,6 +2,9 @@
  * @type {import('next').NextConfig}
  */
 
+/**
+ * TODO: remove .babelrc and replace it with swc
+ */
 const isProd = process.env.NODE_ENV === 'production'
 
 const REQUIRED_CONFIG = {
