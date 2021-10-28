@@ -8,7 +8,7 @@ module.exports = {
   mode: 'jit',
   theme: {
     colors: {
-      // You may custumize your own custom color here
+      // You may customize your own custom color here
       ...colors
     }
   },
