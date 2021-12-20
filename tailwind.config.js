@@ -1,10 +1,14 @@
 const colors = require('tailwindcss/colors')
 
 delete colors?.lightBlue
+delete colors?.warmGray
+delete colors?.trueGray
+delete colors?.coolGray
+delete colors?.blueGray
 
 module.exports = {
-  purge: ['./src/**/*.{ts,tsx}', './src/pages/**/*.{ts,tsx}'],
-  darkMode: false,
+  content: ['./src/**/*.{ts,tsx}', './src/pages/**/*.{ts,tsx}'],
+  media: false,
   mode: 'jit',
   theme: {
     colors: {
