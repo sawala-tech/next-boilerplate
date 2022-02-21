@@ -4,7 +4,7 @@ An opinionated boilerplate to kickstart projects using NextJS
 
 ## Features
 
-- 👏🏼 Next 11
+- 👏🏼 Next 12
 - ⚛️ React 17
 - 🌊 Custom Document, App, Error and 404 Page!
 - ⌨️ Type safety using TypeScript in strict mode
@@ -20,6 +20,12 @@ An opinionated boilerplate to kickstart projects using NextJS
 
 ```sh
 git clone --single-branch git@github.com:sawala-tech/next-boilerplate.git
+```
+
+### With no Jest
+
+```sh
+git clone -b no-jest --single-branch git@github.com:sawala-tech/next-boilerplate.git
 ```
 
 ## Getting started
