@@ -20,6 +20,7 @@ pnpm-lock.yaml
 # misc
 .DS_Store
 *.pem
+tsconfig.tsbuildinfo
 
 # debug
 npm-debug.log*
