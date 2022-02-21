@@ -35,7 +35,7 @@
     "nprogress": "^0.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "sharp": "0.27.2"
+    "sharp": "^0.30.1"
   },
   "devDependencies": {
     "@babel/plugin-syntax-typescript": "^7.14.5",
