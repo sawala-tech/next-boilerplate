@@ -1,4 +1,5 @@
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
+import { Fragment } from 'react'
 
 import { extractCritical } from '@emotion/server'
 
@@ -7,18 +8,24 @@ export default class _DOCUMENT extends Document<{
   css: string
 }> {
   static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx)
     const page = await ctx.renderPage()
-    const styles = extractCritical(page.html)
-    return { ...initialProps, ...page, ...styles }
+    const initialProps = await Document.getInitialProps(ctx)
+    const { css, ids } = extractCritical(page.html)
+    return {
+      ...initialProps,
+      styles: (
+        <Fragment>
+          {initialProps.styles}
+          <style data-emotion={`css ${ids.join(' ')}`} dangerouslySetInnerHTML={{ __html: css }} />
+        </Fragment>
+      )
+    }
   }
 
   render() {
     return (
       <Html>
-        <Head>
-          <style data-emotion-css={this.props.ids.join(' ')} dangerouslySetInnerHTML={{ __html: this.props.css }} />
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />

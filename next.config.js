@@ -12,7 +12,8 @@ const REQUIRED_CONFIG = {
   env: {
     SITE_NAME: 'Sawala Boilerplate',
     BASE_URL: isProd ? 'http://localhost:3000' : 'http://localhost:3000'
-  }
+  },
+  extends: ['plugin:@next/next/recommended']
 }
 
 module.exports = REQUIRED_CONFIG

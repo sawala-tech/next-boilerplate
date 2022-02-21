@@ -2,13 +2,19 @@
   "compileOnSave": false,
   "compilerOptions": {
     "allowJs": true,
-    "types": ["jest", "node"],
+    "types": [
+      "jest",
+      "node"
+    ],
     "alwaysStrict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": ["dom", "es2017"],
+    "lib": [
+      "dom",
+      "es2017"
+    ],
     "module": "esnext",
     "moduleResolution": "node",
     "removeComments": true,
@@ -21,20 +27,47 @@
     "strict": true,
     "target": "esnext",
     "baseUrl": ".",
-    "typeRoots": ["./@types", "./types", "./node_modules/@types"],
+    "typeRoots": [
+      "./@types",
+      "./types",
+      "./node_modules/@types"
+    ],
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@types/*": ["@types/*"],
-      "@shared/*": ["src/shared/*"],
-      "@styles/*": ["src/shared/styles/*"],
-      "@jsons/*": ["src/shared/jsons/*"],
-      "@intl/*": ["src/shared/jsons/intl/*"],
-      "@static/*": ["public/static/*"],
-      "@services/*": ["src/services/*"],
-      "@hooks/*": ["src/hooks/*"],
-      "@utils/*": ["src/utils/*"],
-      "@*": ["*"]
-    }
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@types/*": [
+        "@types/*"
+      ],
+      "@shared/*": [
+        "src/shared/*"
+      ],
+      "@styles/*": [
+        "src/shared/styles/*"
+      ],
+      "@jsons/*": [
+        "src/shared/jsons/*"
+      ],
+      "@intl/*": [
+        "src/shared/jsons/intl/*"
+      ],
+      "@static/*": [
+        "public/static/*"
+      ],
+      "@services/*": [
+        "src/services/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@*": [
+        "*"
+      ]
+    },
+    "incremental": true
   },
   "exclude": [
     "dist",
@@ -49,5 +82,8 @@
     "**/*.test.tsx",
     "coverage"
   ],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }
