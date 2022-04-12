@@ -3,10 +3,7 @@ import { Fragment } from 'react'
 
 import { extractCritical } from '@emotion/server'
 
-export default class _DOCUMENT extends Document<{
-  ids: string[]
-  css: string
-}> {
+export default class Documents {
   static async getInitialProps(ctx: DocumentContext) {
     const page = await ctx.renderPage()
     const initialProps = await Document.getInitialProps(ctx)
