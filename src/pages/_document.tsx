@@ -3,10 +3,11 @@ import { Fragment } from 'react'
 
 import { extractCritical } from '@emotion/server'
 
-export default class _DOCUMENT extends Document<{
-  ids: string[]
-  css: string
-}> {
+/**
+ * TODO REMOVE TS IGNORE DUE ITS PROHIBITED
+ */
+// @ts-ignore
+export default class Documents extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const page = await ctx.renderPage()
     const initialProps = await Document.getInitialProps(ctx)

@@ -5,7 +5,7 @@ An opinionated boilerplate to kickstart projects using NextJS
 ## Features
 
 - 👏🏼 Next 12
-- ⚛️ React 17
+- ⚛️ React 18
 - 🌊 Custom Document, App, Error and 404 Page!
 - ⌨️ Type safety using TypeScript in strict mode
 - 👀 Lint your code with ESLint & Stylelint
