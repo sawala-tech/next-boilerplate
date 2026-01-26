@@ -1,0 +1,31 @@
+@import './shadcn.css';
+@import './typography.css';
+
+@import 'tailwindcss';
+@source '../../apps/**/*.{ts,tsx}';
+@source '../../components/**/*.{ts,tsx}';
+@source '../**/*.{ts,tsx}';
+
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-primary-pink: #f20b82;
+  --color-primary-blue: #0073cb;
+  --color-primary-orange: #f1632f;
+  --color-primary-black: #2d231c;
+  --color-primary-yellow: #e5bf00;
+  --color-primary-green: #16a34a;
+  --color-primary-blue-light: #4fb5cf;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-figtree;
+  }
+}

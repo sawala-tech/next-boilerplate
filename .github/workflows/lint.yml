@@ -1,0 +1,47 @@
+name: Code Check
+on:
+  push:
+    branches:
+      - main
+      - staging
+      - dev-wanfah
+  pull_request:
+    branches:
+      - main
+      - staging
+      - dev-wanfah
+
+concurrency:
+  group: ${{ github.job }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: ESLint, TypeScript, Prettier
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Download deps
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm run lint:strict
+
+      - name: Type check
+        run: pnpm run typecheck
+
+      - name: Prettier check
+        run: pnpm run prettier:format

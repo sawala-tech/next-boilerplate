@@ -1,0 +1,13 @@
+{
+  "bracketSameLine": false,
+  "endOfLine": "auto",
+  "plugins": ["prettier-plugin-sort-json", "prettier-plugin-tailwindcss"],
+  "printWidth": 125,
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "tailwindPreserveDuplicates": true,
+  "tailwindPreserveWhitespace": true,
+  "tailwindStylesheet": "src/shared/styles/app.css",
+  "trailingComma": "none"
+}

@@ -1,0 +1,10 @@
+!src/*
+!types/*
+.github/*
+.huksy/*
+.plop/*
+.next/*
+.huksy/*
+public/*
+pnpm-lock.yaml
+pnpm-workspace.yaml

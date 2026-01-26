@@ -1,0 +1,52 @@
+@theme {
+  --font-figtree: "'Figtree', sans-serif";
+}
+
+@font-face {
+  font-family: "'Figtree', sans-serif";
+  src: url('../fonts/figtree/Figtree-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "'Figtree', sans-serif";
+  src: url('../fonts/figtree/Figtree-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "'Figtree', sans-serif";
+  src: url('../fonts/figtree/Figtree-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "'Figtree', sans-serif";
+  src: url('../fonts/figtree/Figtree-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "'Figtree', sans-serif";
+  src: url('../fonts/figtree/Figtree-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "'Figtree', sans-serif";
+  src: url('../fonts/figtree/Figtree-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "'Figtree', sans-serif";
+  src: url('../fonts/figtree/Figtree-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+*,
+html,
+body {
+  font-family: var(--font-figtree);
+}
